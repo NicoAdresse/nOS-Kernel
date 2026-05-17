@@ -6,7 +6,7 @@ mod scrolling;
 
 use core::panic::PanicInfo;
 
-use crate::vga::{cursor::reset_cursor, writer::clear_screen};
+use crate::vga::{cursor::reset_cursor};
 
 /// Kernel Entry Point
 #[no_mangle]
