@@ -12,7 +12,7 @@ use crate::vga::{cursor::reset_cursor, writer::clear_screen};
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
     reset_cursor();
-    vga::print_boot_banner();
+    vga::print_boot_banner(); // <- Change stuff here with various commands in src/vga/writer.rs
     // Enter a low-power execution halt state to prevent the CPU from executing unmapped memory
     loop {
         unsafe {
