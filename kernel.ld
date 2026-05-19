@@ -6,7 +6,6 @@ SECTIONS {
     . = 0x10000;
 
     .text : {
-        /* Force the entry point function to be at the very beginning */
         *(.text._start)
         *(.text .text.*)
     }
