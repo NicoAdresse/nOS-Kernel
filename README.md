@@ -4,9 +4,9 @@ nOS is a small, experimental x86_64 operating system written in Rust.
 
 # How Does It Work
 
-It boots via a custom 64-bit bootloader (boot64.asm), enters long mode, and hands control to a minimal Rust kernel with a handcrafted VGA text subsystem.
+It boots via a custom 64-bit bootloader (boot64.asm), enters long mode, and hands control to a minimal Rust kernel with a handcrafted VGA text subsystem with keyboard input.
 
-This project is a playground for systems programming, OS design, and low-level Rust — built from scratch, without a `std`, without an existing OS framework, and without external runtime depndencies.
+This project is a playground for systems programming, OS design, and low-level Rust — built from scratch, without a `std`, without an existing OS framework, and without external runtime dependencies.
 
 # Features
 
@@ -39,7 +39,7 @@ You need:
 - `nasm`
 - `qemu-system-x86_64`
 
-After you've installed everything, you need to run this command: `chmod +x ./init.sh` to initalize the build script.
+After you've installed everything, you need to run this command: `chmod +x ./init.sh` to initialize the build script.
 
 Then run the build script anytime you want with `./init.sh`!
 
@@ -100,7 +100,7 @@ vga::println("Hello,", vga::Style::new(vga::Color::LightCyan, vga::Color::Black)
 vga::print(" World!", vga::Style::new(vga::Color::Green, vga::Color::Black));
 ```
 
-Or used named styles:
+Or use named styles:
 
 `vga::println_named("Hello from nOS!", "white_black");`
 
