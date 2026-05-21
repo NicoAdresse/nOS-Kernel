@@ -39,7 +39,9 @@ You need:
 - `nasm`
 - `qemu-system-x86_64`
 
-You can find the build script in initialization.txt, copy it and paste it into your terminal while you are in your appropriate directory.
+After you've installed everything, you need to run this command: `chmod +x ./init.sh` to initalize the build script.
+
+Then run the build script anytime you want with `./init.sh`!
 
 # Project Structure
 
@@ -55,8 +57,19 @@ src/
       ├── buffer.rs
       ├── cursor.rs
       └── writer.rs
-boot64.asm            # 64-bit bootloader
-kernel.ld             # Linker script
+└── interrupts/
+      ├── idt.rs
+      ├── mod.rs
+      └── pic.rs
+└── keyboard/
+      ├── keyboard_input.rs
+      ├── mod.rs
+      ├── translate_scan.rs
+      └── vga_scan.rs
+
+ ├── boot64.asm         # 64-bit bootloader
+ ├── kernel.ld          # Linker script
+ └── init.sh            # Shell script
 
 ```
 
